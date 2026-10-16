@@ -20,7 +20,8 @@ classifiers = [
 ]
 requires-python = ">=3.12,<3.14"
 dependencies = [
-    "mcp[cli]>=1.10.0",
+    # Pinned <2: mcp 2.0.0 removed `mcp.server.fastmcp`, which app.py imports.
+    "mcp[cli]>=1.10.0,<2",
     "monarchmoneycommunity>=1.4.0",
     "gql>=3.4",
     "keyring>=24.0.0",
